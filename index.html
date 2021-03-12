@@ -10,6 +10,7 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
         UnityLoader.instantiate("gameContainer", "Build/game.json", {onProgress: UnityProgress});
+         var unityInstance = UnityLoader.instantiate("unityContainer", "Build/UWGLTest.json");
     </script>
     <style>
         * {
@@ -29,6 +30,7 @@
 </head>
 <body>
 <div class="webgl-content">
+ <div style="height:20px; width: 960px; background: green;" onclick="unityInstance.SetFullscreen(1)"><b>Click here to make it full screen.</b></div>
     <div id="gameContainer"></div>
 </div>
 </body>
